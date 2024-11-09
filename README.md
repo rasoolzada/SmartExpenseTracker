@@ -1,6 +1,6 @@
 # SmartExpenseTracker
 
-**SmartExpenseTracker** is an ASP.NET Core web application designed to help users manage and track their expenses. The app allows users to log details such as expense description, amount, date, and category. It also uses **Machine Learning** with **ML.NET** to predict next month's expenses based on historical data.
+**SmartExpenseTracker** is an ASP.NET Core MVC web application designed to help users manage and track their expenses. The app allows users to log details such as expense description, amount, date, and category. It also uses **Machine Learning** with **ML.NET** to predict next month's expenses based on historical data.
 
 ![Screenshot](https://github.com/rasoolzada/SmartExpenseTracker/blob/master/SmartExpenseTracker/wwwroot/expense.gif)
 
