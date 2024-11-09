@@ -1,0 +1,42 @@
+﻿@model Expense
+
+@{
+    ViewData["Title"] = "Create Expense";
+}
+
+<div class="container my-5">
+    <h2 class="text-center text-primary mb-4">Create New Expense</h2>
+
+    <form asp-action="Create" class="shadow p-4 rounded bg-light">
+        <div class="mb-3">
+            <label for="Description" class="form-label">Description</label>
+            <input asp-for="Description" class="form-control" placeholder="Enter description" />
+            <span asp-validation-for="Description" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label for="Amount" class="form-label">Amount</label>
+            <input asp-for="Amount" type="number" step="0.01" class="form-control" placeholder="Enter amount" />
+            <span asp-validation-for="Amount" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label for="Date" class="form-label">Date</label>
+            <input asp-for="Date" type="date" class="form-control" />
+            <span asp-validation-for="Date" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label for="Category" class="form-label">Category</label>
+            <select asp-for="CategoryId" asp-items="@(ViewData["Categories"] as SelectList)" class="form-select">
+                <option value="0">Select Category</option>
+            </select>
+            <span asp-validation-for="CategoryId" class="text-danger"></span>
+        </div>
+
+        <div class="d-flex justify-content-center">
+            <button type="submit" class="btn btn-success me-2">Save</button>
+            <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+        </div>
+    </form>
+</div>

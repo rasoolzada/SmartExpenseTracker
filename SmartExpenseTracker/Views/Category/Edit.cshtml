@@ -1,0 +1,20 @@
+﻿@model SmartExpenseTracker.Models.Category
+
+@{
+    ViewData["Title"] = "Edit Category";
+}
+
+<div class="container">
+    <h2>Edit Category</h2>
+
+    <form asp-action="Edit" method="post">
+        <input type="hidden" asp-for="Id" />
+        <div class="mb-3">
+            <label for="Name" class="form-label">Category Name</label>
+            <input type="text" class="form-control" asp-for="Name" required />
+        </div>
+
+        <button type="submit" class="btn btn-primary">Save Changes</button>
+        <a href="@Url.Action("Index", "Category")" class="btn btn-secondary">Cancel</a>
+    </form>
+</div>

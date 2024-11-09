@@ -1,0 +1,20 @@
+﻿@model SmartExpenseTracker.Models.Category
+
+@{
+    ViewData["Title"] = "Add Category";
+}
+
+<div class="container">
+    <h2>Add Category</h2>
+
+    <form asp-action="Create" method="post">
+        @Html.AntiForgeryToken()
+        <div class="mb-3">
+            <label for="Name" class="form-label">Category Name</label>
+            <input type="text" class="form-control" id="Name" name="Name" required />
+        </div>
+
+        <button type="submit" class="btn btn-primary">Add Category</button>
+        <a href="@Url.Action("Index", "Category")" class="btn btn-secondary">Cancel</a>
+    </form>
+</div>

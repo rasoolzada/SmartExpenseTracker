@@ -1,0 +1,31 @@
+﻿@model IEnumerable<SmartExpenseTracker.Models.Category>
+
+@{
+    ViewData["Title"] = "Categories";
+}
+
+<div class="container">
+    <h2>Categories</h2>
+    <a href="@Url.Action("Create", "Category")" class="btn btn-primary mb-3">Add Category</a>
+
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var category in Model)
+            {
+                <tr>
+                    <td>@category.Name</td>
+                    <td>
+                        <a href="@Url.Action("Edit", "Category", new { id = category.Id })" class="btn btn-warning btn-sm">Edit</a>
+                        <a href="@Url.Action("Delete", "Category", new { id = category.Id })" class="btn btn-danger btn-sm">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

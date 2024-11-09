@@ -1,0 +1,18 @@
+﻿@{
+    ViewData["Title"] = "Spending Prediction";
+}
+
+<div class="container my-5">
+    <h2 class="text-center text-info mb-4">Spending Prediction</h2>
+
+    <div class="card shadow-sm p-4 rounded bg-light">
+        <div class="card-body text-center">
+            <h4 class="card-title mb-3">Predicted Spending for Next Month</h4>
+            <p class="display-6 text-primary fw-bold">$@String.Format("{0:}", ViewBag.Prediction)</p>
+        </div>
+    </div>
+
+</div>
+<div class="d-flex justify-content-center">
+    <a asp-action="Index" class="btn btn-secondary">Back</a>
+</div>
